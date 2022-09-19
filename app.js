@@ -36,18 +36,25 @@
 // alert("Ha iniciado sesion correctamente, puedo seguir a elegir su auto")
 
 class Auto{
-   constructor(imagen, modelo, precio){
+   constructor(imagen, modelo, precio, id){
       this.imagen = imagen
       this.modelo = modelo
       this.precio = precio
+      this.id = id
    }
 }
-const trend = new Auto("images/trend.jpg", "Gol Trend", 200000)
-const sentra = new Auto("images/sentra.jpg", "Nissan Sentra", 300000)
-const peugeot = new Auto("images/208.jpg", "208gti", 500000)
-const cruze = new Auto("images/cruze.jpg","Chevrolet Cruze", 400000)
+const trend = new Auto("images/trend.jpg", "Gol Trend", 200000,"1")
+const sentra = new Auto("images/sentra.jpg", "Nissan Sentra", 300000, "2")
+const peugeot = new Auto("images/208.jpg", "208gti", 500000, "3")
+const cruze = new Auto("images/cruze.jpg","Chevrolet Cruze", 400000, "4")
+const civic = new Auto("images/civic.jpg", "Honda Civic", 600000, "5" )
+const focus = new Auto("images/focus.jpg", "Ford Focus", 700000, "6")
+const corolla = new Auto("images/corolla.jpg", "Toyota Corolla", 800000, "7")
+const tiguan = new Auto("images/tiguan.jpg", "Volkswagen Tiguan", 900000, "8")
+const suran = new Auto("images/suran.jpg", "Volkswagen Suran", 1000000, "9")
+const tresmil = new Auto("images/3008.jpg", "Peugeot 3008", 1100000, "10")
 
-let arrayAutos = [trend, sentra, peugeot,cruze];
+let arrayAutos = [trend, sentra, peugeot, cruze, civic, focus, corolla, tiguan, suran, tresmil ];
 
 let contenedorCard = document.getElementById("contenedor-card")
 arrayAutos.forEach(producto => {
@@ -57,21 +64,29 @@ arrayAutos.forEach(producto => {
    <div class="card-body">
      <h5 class="card-title">${producto.modelo}</h5>
      <p class="card-text">${producto.precio}</p>
-     <a href="#" class="btn btn-primary" id="btn-compra">Agregar al carrito</a>
+     <button class="btn btn-primary" id="button${producto.id}">Agregar al carrito</button>
    </div>
  </div>`
  contenedorCard.appendChild(div)
+
+let button = document.getElementById(`button${producto.id}`);
+button.addEventListener('click', () =>{
+//    // carrito(`${product.id}`);
+ alert(`Agregaste ${producto.modelo}`)
 }) 
+})
 
 
 
 const carrito = []
 
-let btnCompra = document.getElementById("btn-compra")
+// let btnCompra = document.getElementById("btn-compra")
 
-btnCompra.addEventListener("click", () => {
+// btnCompra.addEventListener("click", () => {
    
-})
+//    alert(`Agregaste ${producto.name}
+
+
 
 
 
@@ -117,4 +132,4 @@ btnCompra.addEventListener("click", () => {
 // carrito.forEach(producto => console.log(producto))
 
 // let precioTotal = carrito.reduce((acumulador, elemento) => acumulador + elemento.precio, 0)
-// console.log("El precio total es de $" + precioTotal)  
+// console.log("El precio total es de $" + precioTotal)

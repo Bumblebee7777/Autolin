@@ -1,9 +1,9 @@
 .contenedor-card{
     display: flex;
     flex-flow: row wrap;
-    max-width: 1200px;
+    max-width: 1400px;
     justify-content: center;
-    align-items: center;
+    align-items:center;
     margin-left: auto;
     margin-right: auto;
     gap: 1rem;
