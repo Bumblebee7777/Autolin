@@ -41,3 +41,33 @@ carrito.forEach(producto => console.log(producto))
 
 let precioTotal = carrito.reduce((acumulador, elemento) => acumulador + elemento.precio, 0)
 console.log("El precio total es de $" + precioTotal)
+
+
+localStorage.setItem("key", "value")
+
+
+
+
+
+
+let arrayAutos = [trend, sentra, peugeot, cruze, civic, focus, corolla, tiguan, suran, tresmil ];
+
+let contenedorCard = document.getElementById("contenedor-card")
+arrayAutos.forEach(producto => {
+   let div = document.createElement("div")
+   div.innerHTML = ` <div class="card" style="width: 18rem;">
+   <img src="${producto.imagen}" class="card-img-top" alt="...">
+   <div class="card-body">
+     <h5 class="card-title">${producto.modelo}</h5>
+     <p class="card-text">${producto.precio}</p>
+     <button class="btn btn-primary" id="button${producto.id}">Agregar al carrito</button>
+   </div>
+ </div>`
+ contenedorCard.appendChild(div)
+
+let button = document.getElementById(`button${producto.id}`);
+button.addEventListener('click', () =>{
+//    // carrito(`${product.id}`);
+ alert(`Agregaste ${producto.modelo}`)
+}) 
+})

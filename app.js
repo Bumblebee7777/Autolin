@@ -43,6 +43,9 @@ class Auto{
       this.id = id
    }
 }
+const carrito = []
+
+
 const trend = new Auto("images/trend.jpg", "Gol Trend", 200000,"1")
 const sentra = new Auto("images/sentra.jpg", "Nissan Sentra", 300000, "2")
 const peugeot = new Auto("images/208.jpg", "208gti", 500000, "3")
@@ -71,14 +74,59 @@ arrayAutos.forEach(producto => {
 
 let button = document.getElementById(`button${producto.id}`);
 button.addEventListener('click', () =>{
-//    // carrito(`${product.id}`);
+   agregarAuto(producto.id)
  alert(`Agregaste ${producto.modelo}`)
 }) 
 })
 
+function agregarAuto(id){
+   const producto = arrayAutos.find(producto => producto.id === id);   
+   const productoCantidad = carrito.find(producto => producto.id === id); 
+   //Si me encuentra el producto lo cuenta mas de una vez.   
+   if (productoCantidad) {     productoCantidad.cantidad++ //Si lo encuentra aumenta la cantidad para que no se repita la card o el texto de producto.   
+  } else {    
+    carrito.push(producto);   
+   }
+actualizarCarrito()
+localStorage.setItem("compras", JSON.stringify(carrito))
+}
+
+if(localStorage.getItem("compras")){
+   let compra = JSON.parse(localStorage.getItem("compras"))
+   for(let i = 0; i < compra.lenght; i ++){ 
+      carrito.push(compra[i])
+   }
+}
+
+const mostrarCarrito = document.getElementById("carrito-compra")
+
+function actualizarCarrito(){ 
+   let acumuladorAuto = ""
+   carrito.forEach(producto => {
+      acumuladorAuto += `<div class="card" style="width: 18rem;">
+      <img src="${producto.imagen}" class="card-img-top" alt="...">
+      <div class="card-body">
+        <h5 class="card-title">${producto.modelo}</h5>
+        <p class="card-text">${producto.precio}</p>
+        <button onClick = eliminarAuto(${producto.id}) > X </button>
+        </div>
+      </div>`
+   })
+   mostrarCarrito.innerHTML = acumuladorAuto
+   
+}
 
 
-const carrito = []
+ const eliminarAuto = (id) => {
+   const producto = carrito.find(producto => producto.id === id);
+  carrito.splice(carrito.indexOf(producto), 1);
+  actualizarCarrito()
+ }
+
+
+ 
+
+
 
 // let btnCompra = document.getElementById("btn-compra")
 
