@@ -75,7 +75,14 @@ arrayAutos.forEach(producto => {
 let button = document.getElementById(`button${producto.id}`);
 button.addEventListener('click', () =>{
    agregarAuto(producto.id)
- alert(`Agregaste ${producto.modelo}`)
+ Toastify({
+
+text: "Agregaste auto al carrito",
+
+duration: 1500,
+
+position: "right"
+}).showToast();
 }) 
 })
 
