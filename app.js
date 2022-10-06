@@ -90,11 +90,10 @@ function agregarAuto(id){
    const producto = arrayAutos.find(producto => producto.id === id);   
    const productoCantidad = carrito.find(producto => producto.id === id); 
    //Si me encuentra el producto lo cuenta mas de una vez.   
-   if (productoCantidad) {     productoCantidad.cantidad++ //Si lo encuentra aumenta la cantidad para que no se repita la card o el texto de producto.   
-  } else {    
-    carrito.push(producto);   
-   }
-actualizarCarrito()
+  
+   productoCantidad ? productoCantidad.cantidad++ : carrito.push(producto)
+
+   actualizarCarrito()
 localStorage.setItem("compras", JSON.stringify(carrito))
 }
 
