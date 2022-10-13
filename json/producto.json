@@ -1,0 +1,66 @@
+[ 
+    {"id":1, 
+    "modelo":"Gol Trend",
+    "precio": "200000",
+    "imagen": "images/trend.jpg",
+    "cantidad": "1"
+    },
+    {
+     "id":2,
+     "modelo":"Nissan Sentra",
+     "precio": "300000",
+     "imagen": "images/sentra.jpg",
+     "cantidad": "1"
+    },
+    {
+    "id":3,
+    "modelo":"208 GTI",
+    "precio": "500000",
+    "imagen": "images/208.jpg",
+    "cantidad": "1"
+    },
+    {
+    "id":4,
+     "modelo":"Chevrolet Cruze",
+     "precio": "400000",
+     "imagen": "images/cruze.jpg",
+     "cantidad": "1"
+    },
+    {"id":5,
+     "modelo":"Honda Civic",
+     "precio": "600000",
+     "imagen": "images/civic.jpg",
+     "cantidad": "1"
+    },
+    {"id":6,
+     "modelo":"Ford Focus",
+     "precio": "700000",
+     "imagen": "images/focus.jpg",
+     "cantidad": "1"
+    },
+    {"id":7,
+     "modelo":"Toyota Corolla",
+     "precio": "800000",
+     "imagen": "images/corolla.jpg",
+     "cantidad": "1"
+    },
+    {"id":8,
+     "modelo":"Volkswagen Tiguan",
+     "precio": "900000",
+     "imagen": "images/tiguan.jpg",
+     "cantidad": "1"
+    },
+    {"id":9,
+     "modelo":"Volkswagen Suran",
+     "precio": "1000000",
+     "imagen": "images/suran.jpg",
+     "cantidad": "1"
+    },
+    {"id":10,
+     "modelo":"Peugeot 3008",
+     "precio": "1100000",
+     "imagen": "images/3008.jpg",
+     "cantidad": "1"
+    }
+]
+        

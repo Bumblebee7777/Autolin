@@ -12,27 +12,37 @@ html {   box-sizing: border-box;   font-family: var(--font);   font-size: 16px; 
         ul {   margin: 0; } 
          li {   list-style-type: none; }
 
-         /* main{
-            opacity: ;
-         }
+         
+         body {
+          font-family: "Open Sans", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen-Sans, Ubuntu, Cantarell, "Helvetica Neue", Helvetica, Arial, sans-serif; 
+        }
 
 .body{
-    background-image: url();
-    
+    background-image: url(https://www.autobild.es/sites/autobild.es/public/dc/fotos/Ferrari-sf90-stradale.jpg);
+    background-position: 50%;
+    background-repeat: no-repeat;
+    background-size: cover;
 
-} */
+}
+
+.logo{
+  width: 15%;
+  display: flex;
+}
 
 .header{
     display: flex;
     justify-content: space-between;
-    
+    font-size: 30px;
+    letter-spacing: 5px;
     color: white;
     align-items: center;
-    height: 50px;
+    /* height: 50px; */
     padding: 0 1rem;
-    background: #43cea2;  /* fallback for old browsers */
-    background: -webkit-linear-gradient(to right, #185a9d, #43cea2);  /* Chrome 10-25, Safari 5.1-6 */
-    background: linear-gradient(to right, #185a9d, #43cea2); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+    background: #D31027;  /* fallback for old browsers */
+    background: -webkit-linear-gradient(to right, #EA384D, #D31027);  /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(to right, #EA384D, #D31027); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+    font-family: 'Dancing Script', cursive;
 
 }      
 
@@ -40,11 +50,13 @@ html {   box-sizing: border-box;   font-family: var(--font);   font-size: 16px; 
     display: flex;
     align-items: center;
     gap: 1rem;
+    font-size: 20px;
 }
 
 .nav ul{
     display: flex;
     gap: 1rem;
+    font-size: 20px;
 }
 .contenedor-card{
     max-width: 1200px;
@@ -57,34 +69,39 @@ html {   box-sizing: border-box;   font-family: var(--font);   font-size: 16px; 
     margin-bottom: 1rem;
 }
 .card{
-    border:2px solid #43cea2;
+    border:2px solid #d81d1d;
     border-radius: 10px;
     width: 320px;
     height: 400px;
     display: flex;
     flex-direction: column;
     gap: 1rem;
+    font-size: 20px;
 
 }
 
 .card img{
     object-fit: cover;
     width: 100%;
-    height: 60%;
+    height: 100%;
     border-radius: 10px;
     
 }
 .card-body{
     padding: 1rem;
-    background-color: rgba(138, 240, 206, 0.742);
+    background: #ED213A;  /* fallback for old browsers */
+    background: -webkit-linear-gradient(to right, #93291E, #ED213A);  /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(to right, #93291E, #ED213A); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+    color: white;
     height: 100%;
 }
 
 .button{ 
     border-radius: 6px;
-    background: #43cea2;  /* fallback for old browsers */
-    background: -webkit-linear-gradient(to right, #185a9d, #43cea2);  /* Chrome 10-25, Safari 5.1-6 */
-    background: linear-gradient(to right, #185a9d, #43cea2); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+    background: #CB356B;  /* fallback for old browsers */
+    background: -webkit-linear-gradient(to right, #BD3F32, #CB356B);  /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(to right, #BD3F32, #CB356B); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+    
     color: white;
     border: 3px solid black;
     padding: 0.3rem ;
@@ -109,7 +126,9 @@ html {   box-sizing: border-box;   font-family: var(--font);   font-size: 16px; 
     display: flex;
     flex-direction: column;
     border-radius: 0.50rem;
-    background-color: white;
+    background: #D31027;  /* fallback for old browsers */
+    background: -webkit-linear-gradient(to right, #EA384D, #D31027);  /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(to right, #EA384D, #D31027); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
   }
   
   .modal-general-content span {
@@ -131,13 +150,17 @@ html {   box-sizing: border-box;   font-family: var(--font);   font-size: 16px; 
     align-items: center;
     gap: 1rem;
     padding: 1rem;
-    background-color: white;
+    background: #D31027;  /* fallback for old browsers */
+    background: -webkit-linear-gradient(to right, #EA384D, #D31027);  /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(to right, #EA384D, #D31027); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
   }
   
   .products-container {
     display: flex;
     flex-direction: column;
-    background-color: white;
+    background: #D31027;  /* fallback for old browsers */
+    background: -webkit-linear-gradient(to right, #EA384D, #D31027);  /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(to right, #EA384D, #D31027); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
   }
   
   .products-cards {
@@ -149,8 +172,10 @@ html {   box-sizing: border-box;   font-family: var(--font);   font-size: 16px; 
   .container-buttons-shop {
     padding: 1rem;
     border-radius: 0.50rem;
-    background-color: white;
-   
+    background: #bdc3c7;  /* fallback for old browsers */
+    background: -webkit-linear-gradient(to right, #2c3e50, #bdc3c7);  /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(to right, #2c3e50, #bdc3c7); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+    
   }
   
   .none{
