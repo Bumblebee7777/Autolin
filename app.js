@@ -90,6 +90,26 @@ const eliminarProducto = (id) => {
   actualizarCarrito();
 };
 
+let pagar = document.getElementById("irAlPago");
+
+let formPagar = document.getElementById("ultimo-paso")
+
+pagar.addEventListener("click", () => {
+  modalCarrito.className = "none";
+  formPagar.className = "pagos"
+})
+
+let cancelar = document.getElementById("close")
+
+cancelar.addEventListener("click", () => {
+formPagar.className = "none"
+})
+
+
+
+
+
+
 let finalizarCompra = document.getElementById("build");
 
 finalizarCompra.addEventListener("click", () => {
@@ -121,3 +141,5 @@ function totalCarrito() {
   });
   totalCompra.innerHTML = total;
 }
+
+let 

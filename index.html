@@ -36,11 +36,55 @@
             <div class="container-buttons-shop">
               <h4 class="text-principal">Total: $<i id="total">0</i></h4>
               <button id="delete-shop">Vaciar Carrito</button>
-              <button id="build">Finalizar Compra</button>
+              <button id="irAlPago">Finalizar Pago</button>
             </div>
           </article>
+
+        
             
-       </section>
+        </section>
+
+        <section id="ultimo-paso" class="pagos none">
+          <article  class="modal-general-content pay">
+            <h3>Metodo de Pago</h3>
+            <div>
+              <label for="transferencia">Transferencia</label>
+              <input type="radio" name="type-pay" id="transferencia" required>
+            </div>
+            <div>
+              <label for="efectivo">Efectivo</label>
+              <input type="radio" name="type-pay" id="efectivo">
+            </div>
+            <div>
+              <label for="tarjeta">Tarjeta</label>
+              <input type="radio" name="type-pay" id="tarjeta">
+            </div>
+            <h3>Datos del facturacion</h3>
+            <div>
+              <input type="text" placeholder="Ingrese su nombre">
+              <input type="text" placeholder="Ingrese su apellido">
+            </div>
+            <div>
+              <h4>Email</h4>
+              <input type="text" placeholder="Ingrese su email">
+            </div>
+            <div>
+              <h4>Domicilio</h4>
+              <input type="text" placeholder="Ingrese su domicilio">
+            </div>
+            <div>
+              <button  id="close">Cancelar</button>
+              <button id="build">Finalizar Compra</button>
+            </div>
+              
+
+
+
+
+
+          </article>
+        </section>
+       
 
        <article class="contenedor-card" id="contenedor-card">
 
